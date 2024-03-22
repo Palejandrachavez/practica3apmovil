@@ -4,12 +4,13 @@ import 'package:practica3apmovil/presentation/screens/home/witdgets/CustomListTi
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+  final String nameScreen = "HomeScreen";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Practica menu"),
+        title: const Text("Menu de materia 3"),
       ),
       body: const _HomeView(),
     );
