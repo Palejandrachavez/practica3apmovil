@@ -1,15 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:practica3apmovil/presentation/screens/Progress/ProgreScreen.dart';
-import 'package:practica3apmovil/presentation/screens/animated/AnimatedScreen.dart';
-import 'package:practica3apmovil/presentation/screens/buttons/ButtonScreen.dart';
-import 'package:practica3apmovil/presentation/screens/cards/CardScreen.dart';
-
-import 'package:practica3apmovil/presentation/screens/home/home.dart';
-import 'package:practica3apmovil/presentation/screens/infinitescroll/InfiniteScrollScreen.dart';
-import 'package:practica3apmovil/presentation/screens/snackbar/SnackbarScreen.dart';
-import 'package:practica3apmovil/presentation/screens/tema/TemaScreen.dart';
-import 'package:practica3apmovil/presentation/screens/tutorial/TutorialScreen.dart';
-import 'package:practica3apmovil/presentation/screens/uicontrols/UicontrolsScreen.dart';
+import 'package:practica3apmovil/presentation/screens/Screens.dart';
 
 final appRouter =
     GoRouter(debugLogDiagnostics: true, initialLocation: '/', routes: [
