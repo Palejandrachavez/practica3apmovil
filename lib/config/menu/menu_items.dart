@@ -30,44 +30,44 @@ const appMenuItems = <MenuItem>[
       icon: Icons.credit_card),
   MenuItem(
       title: 'Progress Indicators',
-      subtitle: 'Generales y controlados',
-      link: '/progress',
+      subtitle: 'ProgreScreen',
+      link: '/Progress',
       icon: Icons.refresh,
-      nameScreen: ''),
+      nameScreen: 'ProgreScreen'),
   MenuItem(
       title: 'Snackbar y diálogos',
       subtitle: 'Indicadores en pantallas',
       link: '/snackbar',
       icon: Icons.info_outline,
-      nameScreen: ''),
+      nameScreen: 'SnackbarScreen'),
   MenuItem(
       title: 'Snackbar y diálogos',
       subtitle: 'Indicadores en pantallas',
-      link: '/dialog',
+      link: '/animated',
       icon: Icons.crop_square,
-      nameScreen: ''),
+      nameScreen: 'AnimatedScreen'),
   MenuItem(
       title: 'UI Controls + Tiles',
       subtitle: 'Una serie de controles de flutter',
       link: '/uicontrols',
       icon: Icons.car_rental,
-      nameScreen: ''),
+      nameScreen: 'Uicontrols'),
   MenuItem(
       title: 'Introducción a la aplicación',
       subtitle: 'Pequeño tutorial introductorio',
-      link: '/introduccion',
+      link: '/tutorial',
       icon: Icons.accessible,
-      nameScreen: ''),
+      nameScreen: 'TutorialScreen'),
   MenuItem(
       title: 'InfiniteScroll y Pull',
       subtitle: 'Listas infinitas y Pull to refresh',
       link: '/infinitescroll',
       icon: Icons.format_list_bulleted_rounded,
-      nameScreen: ''),
+      nameScreen: 'InfiniteScrollScreen'),
   MenuItem(
       title: 'Cambiar tema',
       subtitle: 'Cambiar tema de la aplicación',
-      link: '/tema',
+      link: '/TemaScreen',
       icon: Icons.palette,
-      nameScreen: '')
+      nameScreen: 'TemaScreen')
 ];

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practica3apmovil/config/menu/menu_items.dart';
-import 'package:practica3apmovil/presentation/screens/home/witdgets/CustomListTitle.dart';
+import 'package:practica3apmovil/presentation/witdgets/CustomListTitle.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
