@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:practica3apmovil/presentation/witdgets/widgets.dart';
 
-class ButtonScreen extends StatelessWidget {
+class ButtonScreen extends StatelessWidget with AppBarCustom {
   const ButtonScreen({super.key});
   final String nameScreen = "ButtonScreen";
 

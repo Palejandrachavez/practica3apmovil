@@ -1,32 +1,49 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:practica3apmovil/config/menu/menu_items.dart';
-import 'package:practica3apmovil/presentation/witdgets/CustomListTitle.dart';
+import 'package:practica3apmovil/presentation/witdgets/slideMenu/slide_menu.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const String nameScreen = 'home_screen';
   const HomeScreen({super.key});
-  final String nameScreen = "HomeScreen";
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Menu de materia 3"),
-      ),
-      body: const _HomeView(),
-    );
+        appBar: AppBar(
+          title: const Text('Menu de Materia 3'),
+        ),
+        body: ListView.builder(
+            itemCount: appMenuItems.length, itemBuilder: menuList),
+        drawer: SideMenu(scaffoldKey: scaffoldKey));
+  }
+
+  Widget menuList(BuildContext context, int index) {
+    final menuItem = appMenuItems[index];
+    return _CustomListTitle(menuItem: menuItem);
   }
 }
 
-class _HomeView extends StatelessWidget {
-  const _HomeView();
+class _CustomListTitle extends StatelessWidget {
+  const _CustomListTitle({
+    required this.menuItem,
+  });
+
+  final MenuItem menuItem;
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: appMenuItems.length, itemBuilder: _getmenuList);
-  }
+    final colors = Theme.of(context).colorScheme;
 
-  Widget _getmenuList(context, index) => CustomListTitle(
-        item: appMenuItems[index],
-      );
+    return ListTile(
+      leading: Icon(menuItem.icon, color: colors.primary),
+      trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
+      title: Text(menuItem.title),
+      subtitle: Text(menuItem.subtitle),
+      onTap: () {
+        context.push(menuItem.link);
+      },
+    );
+  }
 }
